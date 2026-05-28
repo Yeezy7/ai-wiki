@@ -11,6 +11,15 @@ export default defineConfig({
       components: {
         SiteTitle: './src/components/SiteTitle.astro',
       },
+      editLink: {
+        baseUrl: 'https://github.com/Yeezy7/ai-wiki/edit/main/sites/multimodal',
+      },
+      lastUpdated: true,
+      pagination: true,
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 3,
+      },
       social: [
         {
           icon: 'github',
