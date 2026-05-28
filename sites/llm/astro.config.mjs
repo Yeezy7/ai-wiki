@@ -12,6 +12,7 @@ export default defineConfig({
         SiteTitle: './src/components/SiteTitle.astro',
         MarkdownContent: './src/components/MarkdownContent.astro',
       },
+      customCss: ['./src/styles/custom.css'],
       editLink: {
         baseUrl: 'https://github.com/Yeezy7/ai-wiki/edit/main/sites/llm',
       },
