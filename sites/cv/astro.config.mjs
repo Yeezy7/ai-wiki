@@ -8,6 +8,9 @@ export default defineConfig({
     starlight({
       title: 'CV Wiki',
       description: '计算机视觉知识库',
+      components: {
+        SiteTitle: './src/components/SiteTitle.astro',
+      },
       social: [
         {
           icon: 'github',

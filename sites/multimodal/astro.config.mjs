@@ -8,6 +8,9 @@ export default defineConfig({
     starlight({
       title: 'Multimodal Wiki',
       description: '多模态知识库',
+      components: {
+        SiteTitle: './src/components/SiteTitle.astro',
+      },
       social: [
         {
           icon: 'github',

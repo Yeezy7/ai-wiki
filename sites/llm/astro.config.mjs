@@ -8,6 +8,9 @@ export default defineConfig({
     starlight({
       title: 'LLM Wiki',
       description: '大语言模型知识库',
+      components: {
+        SiteTitle: './src/components/SiteTitle.astro',
+      },
       social: [
         {
           icon: 'github',

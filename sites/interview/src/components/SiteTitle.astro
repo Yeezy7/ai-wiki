@@ -1,0 +1,33 @@
+---
+const { siteTitle } = Astro.props;
+---
+
+<a href="/ai-wiki/" class="site-title-link">
+  <span class="separator">|</span>
+  <span class="home-text">AI Wiki 首页</span>
+</a>
+
+<style>
+  .site-title-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--sl-color-text-accent);
+    font-size: 0.875rem;
+    transition: color 0.2s;
+  }
+
+  .site-title-link:hover {
+    color: var(--sl-color-text);
+  }
+
+  .separator {
+    color: var(--sl-color-gray-3);
+    font-weight: 300;
+  }
+
+  .home-text {
+    white-space: nowrap;
+  }
+</style>

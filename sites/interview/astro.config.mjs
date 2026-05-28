@@ -8,6 +8,9 @@ export default defineConfig({
     starlight({
       title: '面试题库',
       description: 'AI 面试题库',
+      components: {
+        SiteTitle: './src/components/SiteTitle.astro',
+      },
       social: [
         {
           icon: 'github',
