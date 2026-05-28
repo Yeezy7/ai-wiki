@@ -1,0 +1,12 @@
+---
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import CommentsWrapper from './CommentsWrapper.astro';
+
+const { ...props } = Astro.props;
+---
+
+<Default {...props}>
+  <slot />
+</Default>
+
+<CommentsWrapper />

@@ -10,6 +10,7 @@ export default defineConfig({
       description: '大语言模型知识库',
       components: {
         SiteTitle: './src/components/SiteTitle.astro',
+        MarkdownContent: './src/components/MarkdownContent.astro',
       },
       editLink: {
         baseUrl: 'https://github.com/Yeezy7/ai-wiki/edit/main/sites/llm',
