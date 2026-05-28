@@ -1,0 +1,141 @@
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<div class="landing">
+  <div class="hero">
+    <h1>{title}</h1>
+    <p class="description">{description}</p>
+  </div>
+
+  <div class="features">
+    <CardGrid>
+      <Card title="计算机视觉" icon="star">
+        <p>CNN、目标检测、图像分割、模型部署等核心知识</p>
+        <a href="/ai-wiki/cv/" class="card-link">进入学习 →</a>
+      </Card>
+      <Card title="大语言模型" icon="open-book">
+        <p>Transformer、RAG、Fine-tuning、RLHF 等核心技术</p>
+        <a href="/ai-wiki/llm/" class="card-link">进入学习 →</a>
+      </Card>
+      <Card title="多模态" icon="puzzle">
+        <p>CLIP、ViT、Grounding 等前沿技术</p>
+        <a href="/ai-wiki/multimodal/" class="card-link">进入学习 →</a>
+      </Card>
+      <Card title="面试题库" icon="document">
+        <p>按领域整理的高频面试题和标准回答</p>
+        <a href="/ai-wiki/interview/cv" class="card-link">开始复习 →</a>
+      </Card>
+    </CardGrid>
+  </div>
+
+  <div class="stats">
+    <div class="stat-item">
+      <span class="stat-number">3</span>
+      <span class="stat-label">知识领域</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">10+</span>
+      <span class="stat-label">核心文章</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">50+</span>
+      <span class="stat-label">面试题</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .landing {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .description {
+    font-size: 1.25rem;
+    color: var(--sl-color-gray-2);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .features {
+    margin-bottom: 3rem;
+  }
+
+  .card-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--sl-color-text-accent);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .card-link:hover {
+    text-decoration: underline;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    background: var(--sl-color-bg-nav);
+    border-radius: 0.5rem;
+    border: 1px solid var(--sl-color-hairline);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--sl-color-text-accent);
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-2);
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+
+    .stats {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+</style>

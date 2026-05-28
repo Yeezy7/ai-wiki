@@ -1,69 +1,12 @@
 ---
 title: AI Wiki
 description: 面向 AI 学习、面试和工程实践的开源知识库
+template: splash
 ---
 
-import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import Landing from '../../components/Landing.astro';
 
-# AI Wiki
-
-综合性的 AI 知识库，涵盖计算机视觉、大语言模型、多模态等领域。
-
-每个知识点都做到：
-- **能学懂** — 从直觉出发，配合图示和代码
-- **能面试** — 附带标准回答和高频追问
-- **能落地** — 包含工程实践和常见坑
-- **能查阅** — 结构化组织，快速定位
-
-## 知识领域
-
-<CardGrid>
-  <Card title="计算机视觉" icon="star">
-    CNN、目标检测、图像分割、模型部署等核心知识
-    <LinkCard title="进入学习" href="/ai-wiki/cv/" />
-  </Card>
-  <Card title="大语言模型" icon="open-book">
-    Transformer、RAG、Fine-tuning、RLHF 等核心技术
-    <LinkCard title="进入学习" href="/ai-wiki/llm/" />
-  </Card>
-  <Card title="多模态" icon="puzzle">
-    CLIP、ViT、Grounding 等前沿技术
-    <LinkCard title="进入学习" href="/ai-wiki/multimodal/" />
-  </Card>
-  <Card title="面试题库" icon="document">
-    按领域整理的高频面试题和标准回答
-    <LinkCard title="开始复习" href="/ai-wiki/interview/cv" />
-  </Card>
-</CardGrid>
-
-## 推荐学习路径
-
-### 计算机视觉方向
-
-1. **深度学习基础** — CNN、BatchNorm、激活函数、损失函数
-2. **图像处理** — 滤波、边缘检测、形态学操作
-3. **目标检测** — R-CNN、YOLO、NMS、mAP
-4. **图像分割** — U-Net、DeepLab、Mask R-CNN
-5. **模型部署** — ONNX、TensorRT、量化
-
-### 大语言模型方向
-
-1. **Transformer 架构** — 自注意力机制、编码器-解码器
-2. **注意力机制** — 多头注意力、交叉注意力
-3. **Fine-tuning** — LoRA、QLoRA、Adapter
-4. **RAG** — 检索增强生成、向量数据库
-5. **RLHF** — 人类反馈强化学习
-
-### 多模态方向
-
-1. **CLIP** — 对比学习、图文匹配
-2. **ViT** — 视觉 Transformer
-3. **Grounding** — 视觉定位、目标指代
-
-## 如何贡献
-
-AI Wiki 欢迎社区贡献！请查看 [贡献指南](https://github.com/Yeezy7/ai-wiki/blob/main/CONTRIBUTING.md) 了解：
-
-- 文章结构规范
-- 写作要求
-- 提交流程
+<Landing
+  title="AI Wiki"
+  description="综合性的 AI 知识库，涵盖计算机视觉、大语言模型、多模态等领域。每个知识点都做到能学懂、能面试、能落地、能查阅。"
+/>
