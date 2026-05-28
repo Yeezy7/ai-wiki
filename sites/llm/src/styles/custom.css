@@ -67,6 +67,28 @@
   position: relative;
 }
 
+/* 搜索快捷键提示 */
+.search-shortcut {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2px 6px;
+  background: var(--sl-color-gray-6);
+  color: var(--sl-color-gray-3);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+/* 搜索高亮 */
+mark.search-highlight {
+  background: var(--sl-color-accent-low);
+  color: var(--sl-color-accent);
+  padding: 1px 2px;
+  border-radius: 2px;
+}
+
 .search-results {
   position: absolute;
   top: 100%;

@@ -1,0 +1,54 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+  image?: string;
+}
+
+const { title, description, canonicalURL, image } = Astro.props;
+const siteName = 'AI Wiki';
+const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+---
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+<meta name="keywords" content="AI, 人工智能, 机器学习, 深度学习, 计算机视觉, 大语言模型, 多模态, 面试" />
+<meta name="author" content="AI Wiki" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL || Astro.url} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:site_name" content={siteName} />
+{image && <meta property="og:image" content={image} />}
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL || Astro.url} />
+<meta property="twitter:title" content={fullTitle} />
+<meta property="twitter:description" content={description} />
+{image && <meta property="twitter:image" content={image} />}
+
+<!-- Canonical -->
+{canonicalURL && <link rel="canonical" href={canonicalURL} />}
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteName,
+  "url": Astro.site,
+  "description": "面向 AI 学习、面试和工程实践的开源知识库",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${Astro.site}search?q={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  }
+})} />
