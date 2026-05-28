@@ -1,8 +1,8 @@
 {
-  "name": "cv-wiki",
+  "name": "ai-wiki",
   "type": "module",
   "version": "1.0.0",
-  "description": "面向计算机视觉学习、面试和工程实践的开源知识库",
+  "description": "面向 AI 学习、面试和工程实践的开源知识库",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

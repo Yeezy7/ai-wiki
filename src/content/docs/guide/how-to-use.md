@@ -1,13 +1,24 @@
 ---
 title: 如何使用
-description: CV Wiki 的使用方法和文章结构说明
+description: AI Wiki 的使用方法和文章结构说明
 ---
 
 # 如何使用
 
+## 知识领域
+
+AI Wiki 涵盖多个 AI 领域：
+
+| 领域 | 内容 |
+|------|------|
+| [计算机视觉](/ai-wiki/cv/) | CNN、目标检测、图像分割、模型部署 |
+| [大语言模型](/ai-wiki/llm/) | Transformer、RAG、Fine-tuning、RLHF |
+| [多模态](/ai-wiki/multimodal/) | CLIP、ViT、Grounding |
+| [面试题库](/ai-wiki/interview/cv) | 按领域整理的高频面试题 |
+
 ## 文章结构
 
-每篇 CV Wiki 文章都遵循统一的结构，方便不同场景使用：
+每篇 AI Wiki 文章都遵循统一的结构，方便不同场景使用：
 
 | 章节 | 用途 |
 |------|------|
@@ -55,4 +66,4 @@ description: CV Wiki 的使用方法和文章结构说明
 
 ## 贡献指南
 
-欢迎贡献！请查看 [贡献指南](https://github.com/your-username/cv-wiki/blob/main/CONTRIBUTING.md)。
+欢迎贡献！请查看 [贡献指南](https://github.com/Yeezy7/ai-wiki/blob/main/CONTRIBUTING.md)。
