@@ -1,0 +1,46 @@
+import { defineConfig } from 'astro/config';
+import starlight from '@astrojs/starlight';
+
+export default defineConfig({
+  site: 'https://Yeezy7.github.io',
+  base: '/ai-wiki/cv',
+  integrations: [
+    starlight({
+      title: 'CV Wiki',
+      description: '计算机视觉知识库',
+      social: [
+        {
+          icon: 'github',
+          label: 'GitHub',
+          href: 'https://github.com/Yeezy7/ai-wiki',
+        },
+      ],
+      sidebar: [
+        {
+          label: '深度学习基础',
+          items: [
+            { label: 'CNN 基础', slug: 'basics/cnn' },
+            { label: 'BatchNorm', slug: 'basics/batchnorm' },
+            { label: '激活函数', slug: 'basics/activation' },
+            { label: '损失函数', slug: 'basics/loss-functions' },
+          ],
+        },
+        {
+          label: '目标检测',
+          items: [
+            { label: '目标检测综述', slug: 'detection/overview' },
+            { label: 'YOLO 系列', slug: 'detection/yolo' },
+            { label: 'NMS', slug: 'detection/nms' },
+            { label: 'mAP', slug: 'detection/map' },
+          ],
+        },
+        {
+          label: '图像分割',
+          items: [
+            { label: '图像分割综述', slug: 'segmentation/overview' },
+          ],
+        },
+      ],
+    }),
+  ],
+});

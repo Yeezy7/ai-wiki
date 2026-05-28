@@ -8,7 +8,16 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:cv": "cd sites/cv && npm run build",
+    "build:llm": "cd sites/llm && npm run build",
+    "build:multimodal": "cd sites/multimodal && npm run build",
+    "build:interview": "cd sites/interview && npm run build",
+    "build:all": "npm run build && npm run build:cv && npm run build:llm && npm run build:multimodal && npm run build:interview",
+    "dev:cv": "cd sites/cv && npm run dev",
+    "dev:llm": "cd sites/llm && npm run dev",
+    "dev:multimodal": "cd sites/multimodal && npm run dev",
+    "dev:interview": "cd sites/interview && npm run dev"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.33.0",
