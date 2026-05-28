@@ -6,6 +6,7 @@ export default defineConfig({
   site: 'https://Yeezy7.github.io',
   base: '/ai-wiki',
   integrations: [
+    // 首页站点
     starlight({
       title: 'AI Wiki',
       description: '面向 AI 学习、面试和工程实践的开源知识库',
