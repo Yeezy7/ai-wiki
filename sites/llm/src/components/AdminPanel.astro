@@ -97,6 +97,17 @@ description: 文章描述
       this.repo = 'Yeezy7/ai-wiki';
       this.currentFile = null;
       this.init();
+      this.checkPermission();
+    }
+
+    checkPermission() {
+      // 检查用户是否有管理权限
+      const user = JSON.parse(localStorage.getItem('user') || 'null');
+      if (!user || !['admin', 'editor'].includes(user.role)) {
+        // 隐藏管理面板触发按钮
+        const trigger = document.getElementById('admin-trigger');
+        if (trigger) trigger.style.display = 'none';
+      }
     }
 
     init() {

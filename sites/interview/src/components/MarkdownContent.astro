@@ -3,6 +3,7 @@ import Default from '@astrojs/starlight/components/MarkdownContent.astro';
 import CommentsWrapper from './CommentsWrapper.astro';
 import AIChat from './AIChat.astro';
 import AdminPanel from './AdminPanel.astro';
+import UserAuth from './UserAuth.astro';
 
 const { ...props } = Astro.props;
 ---
@@ -11,6 +12,7 @@ const { ...props } = Astro.props;
   <slot />
 </Default>
 
+<UserAuth />
 <CommentsWrapper />
 <AIChat />
 <AdminPanel />
